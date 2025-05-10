@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería de Fotos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .volver {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .volver a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .volver a:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Galería de Fotos</h1>
+  </header>
+
+  <div class="galeria">
+    <img src="fotos/extra1.jpg" alt="extra1">
+    <img src="fotos/extra2.jpg" alt="extra2">
+    <img src="fotos/extra3.jpg" alt="extra3">
+    <img src="fotos/extra4.jpg" alt="extra4">
+    <img src="fotos/postre1.jpg" alt="postre1">
+    <img src="fotos/postre2.jpg" alt="postre2">
+    <img src="fotos/postre3.jpg" alt="postre3">
+    <img src="fotos/postre4.jpg" alt="postre4">
+    <img src="fotos/postre5.jpg" alt="postre5">
+    <img src="fotos/ppl1.jpg" alt="ppl1">
+    <img src="fotos/ppl2.jpg" alt="ppl2">
+    <img src="fotos/ppl3.jpg" alt="ppl3">
+    <img src="fotos/ppl4.jpg" alt="ppl4">
+    <img src="fotos/ppl5.jpg" alt="ppl5">
+  </div>
+
+  <div class="volver">
+    <a href="index.html">← Volver al inicio</a>
+  </div>
+
+</body>
+</html>

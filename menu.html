@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Comida - Schuster Catering</title>
+    <style>
+        :root {
+            --bg-color: linear-gradient(to right, #ffffff, #ffffff);
+            --text-color: rgb(0, 0, 0);
+            --button-bg: rgba(0, 0, 0, 0.6);
+            --button-hover: rgba(0, 0, 0, 0.8);
+            --back-button: black;
+            --back-hover: gray;
+            --font-size: 1em;
+            --font-family: Arial, sans-serif;
+            --letter-spacing: normal;
+        }
+
+        .dark-mode {
+            --bg-color: linear-gradient(to right, #222, #444);
+            --text-color: #ddd;
+            --button-bg: rgba(255, 255, 255, 0.3);
+            --button-hover: rgba(255, 255, 255, 0.5);
+            --back-button: #555;
+            --back-hover: #777;
+        }
+
+        body {
+            background: var(--bg-color);
+            font-family: var(--font-family);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+            font-size: var(--font-size);
+            letter-spacing: var(--letter-spacing);
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background: var(--back-button);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: var(--back-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Galería de Comida</h1>
+        <div class="gallery">
+            <img src="menu/1.jpg" alt="Comida 1">
+            <img src="menu/2.jpg" alt="Comida 2">
+            <img src="menu/3.jpg" alt="Comida 3">
+            <img src="menu/4.jpg" alt="Comida 4">
+            <img src="menu/5.jpg" alt="Comida 5">
+            <img src="menu/6.jpg" alt="Comida 6">
+            <img src="menu/7.jpg" alt="Comida 7">
+            <img src="menu/8.jpg" alt="Comida 8">
+            <img src="menu/9.jpg" alt="Comida 9">
+        </div>
+        <div class="button-container">
+            <button class="back-button" onclick="location.href='index.html'">Volver al inicio</button>
+        </div>
+    </div>
+</body>
+</html>

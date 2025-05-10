@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DÓNDE ESTAMOS - Schuster Catering</title>
+    <style>
+        /* Estilos generales */
+        :root {
+            --primary-color: #f4a261;
+            --secondary-color: #2a9d8f;
+            --text-color: #333;
+            --bg-color: #f8f8f8;
+            --dark-bg-color: #333;
+            --white-color: #fff;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-size: 1.1em;
+            --heading-color: #264653;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--white-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            margin-bottom: 30px;
+            width: 70px;
+            margin-left: calc(50% - 35px);
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .address-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            color: var(--white-color);
+        }
+
+        .address-info {
+            flex: 1;
+        }
+
+        .address-info p {
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+
+        .address-link {
+            color: var(--white-color);
+            text-decoration: underline;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .map-link {
+            display: flex;
+            align-items: center;
+            color: var(--white-color);
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .map-link img {
+            margin-right: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo para el botón Volver al inicio */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #e07b3b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>DÓNDE ESTAMOS</h2>
+        <hr>
+
+        <div class="address-container">
+            <div class="address-info">
+                <p><strong>Amenábar 3075</strong></p>
+                <p>Amenábar 3075, C1429AEC Cdad. Autónoma de Buenos Aires</p>
+                <p><a href="#" class="address-link">Ampliar el mapa</a></p>
+            </div>
+            <a href="#" class="map-link">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="16" height="16" alt="icono de ubicación">
+                Cómo llegar
+            </a>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.584911627988!2d-58.46588882348633!3d-34.58834987290846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6782e61918d%3A0x21a98134a7373310!2sAmen%C3%A1bar%203075!5e0!3m2!1ses-AR!2sar!4v1715302108277!5m2!1ses-AR!2sar" allowfullscreen="" loading="lazy"></iframe>
+
+        <!-- Botón Volver al inicio -->
+        <a href="index.html" class="back-button">Volver al inicio</a>
+    </div>
+
+</body>
+</html>

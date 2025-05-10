@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Schuster Catering</title>
+    <style>
+        /* Definición de colores y fuentes */
+        :root {
+            --bg-color: linear-gradient(to right, #ffffff, #ffffff);
+            --text-color: rgb(0, 0, 0);
+            --button-bg: #333;
+            --button-hover: #444;
+            --highlight-color: #f4a261;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-size: 1.1em;
+            --letter-spacing: 0.5px;
+        }
+
+        .dark-mode {
+            --bg-color: linear-gradient(to right, #222, #444);
+            --text-color: #ddd;
+            --button-bg: #555;
+            --button-hover: #777;
+        }
+
+        body {
+            background: var(--bg-color);
+            font-family: var(--font-family);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+            font-size: var(--font-size);
+            letter-spacing: var(--letter-spacing);
+        }
+
+        h1, h2 {
+            color: var(--highlight-color);
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor principal de contacto */
+        .contact-container {
+            background-color: #fff;
+            color: var(--text-color);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .contact-item img {
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .contact-item img:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-item div {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* Botón de regreso */
+        .back-button {
+            padding: 12px 30px;
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: var(--button-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Estilo de la imagen de contacto */
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Estilo del enlace */
+        .contact-item span {
+            font-size: 1em;
+            font-weight: 300;
+            color: var(--text-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1>Contacto</h1>
+        <h2>¡Estamos aquí para ayudarte!</h2>
+
+        <div class="contact-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+            <div><a href="mailto:info@schuster-catering.com">info@schuster-catering.com</a></div>
+        </div>
+
+        <div class="contact-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+            <div><a href="tel:+541145444424">(011) 4544-4424</a></div>
+        </div>
+
+        <div class="contact-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+            <div>Dirección: Amenabar 3075, Ciudad de Buenos Aires (C1429AEB)</div>
+        </div>
+
+        <div class="contact-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+            <div><a href="https://www.facebook.com/SchusterCatering" target="_blank">facebook.com/SchusterCatering</a></div>
+        </div>
+
+        <div class="contact-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+            <div><a href="https://twitter.com/schustercate" target="_blank">twitter.com/schustercate</a></div>
+        </div>
+
+        <div class="contact-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+            <div><a href="https://www.instagram.com/schustercatering/" target="_blank">instagram.com/schustercatering</a></div>
+        </div>
+
+        <!-- Botón de Volver al Inicio -->
+        <button class="back-button" onclick="location.href='index.html'">Volver al inicio</button>
+    </div>
+
+</body>
+</html>
