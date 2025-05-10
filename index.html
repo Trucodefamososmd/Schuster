@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schuster Catering</title>
+    <style>
+        :root {
+            --bg-color: linear-gradient(to right, #ffffff, #ffffff);
+            --text-color: rgb(0, 0, 0);
+            --button-bg: rgba(0, 0, 0, 0.6);
+            --button-hover: rgba(0, 0, 0, 0.8);
+            --back-button: black;
+            --back-hover: gray;
+            --font-size: 1em;
+            --font-family: Arial, sans-serif;
+            --letter-spacing: normal;
+        }
+
+        .dark-mode {
+            --bg-color: linear-gradient(to right, #222, #444);
+            --text-color: #ddd;
+            --button-bg: rgba(255, 255, 255, 0.3);
+            --button-hover: rgba(255, 255, 255, 0.5);
+            --back-button: #555;
+            --back-hover: #777;
+        }
+
+        .high-contrast {
+            --bg-color: black;
+            --text-color: yellow;
+            --button-bg: yellow;
+            --button-hover: orange;
+            --back-button: yellow;
+            --back-hover: orange;
+        }
+
+        .dyslexia-font {
+            --font-family: 'OpenDyslexic', Arial, sans-serif;
+        }
+
+        .underline-links a {
+            text-decoration: underline !important;
+        }
+
+        .uppercase-text {
+            text-transform: uppercase;
+        }
+
+        .increased-spacing {
+            --letter-spacing: 0.15em;
+        }
+
+        body {
+            background: var(--bg-color);
+            font-family: var(--font-family);
+            text-align: center;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: 0.3s;
+            font-size: var(--font-size);
+            letter-spacing: var(--letter-spacing);
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .accessibility-toggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .accessibility-menu {
+            display: none;
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .accessibility-menu button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .game-option {
+            width: 250px;
+            padding: 15px;
+            font-size: 1.5em;
+            color: white;
+            background: var(--button-bg);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .game-option:hover {
+            background: var(--button-hover);
+        }
+    </style>
+</head>
+<body>
+    <button class="accessibility-toggle" onclick="toggleAccessibilityMenu()">♿ Accesibilidad</button>
+    <div class="accessibility-menu" id="accessibilityMenu">
+        <button onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+        <button onclick="toggleHighContrast()">🔳 Alto Contraste</button>
+        <button onclick="toggleDyslexiaFont()">🔤 Fuente Dislexia</button>
+        <button onclick="increaseFontSize()">🔍 Aumentar Texto</button>
+        <button onclick="resetFontSize()">🔄 Restablecer Texto</button>
+        <button onclick="toggleUnderlineLinks()">🔗 Subrayar Enlaces</button>
+        <button onclick="toggleUppercaseText()">🔠 Texto en Mayúsculas</button>
+        <button onclick="toggleIncreasedSpacing()">📏 Aumentar Espaciado</button>
+    </div>
+
+    <div class="container">
+        <h1>Schuster Catering</h1>
+        <div class="button-container">
+            <button class="game-option" onclick="location.href='pedir.html'">Pedir comida</button>
+            <button class="game-option" onclick="location.href='contacto.html'">Contacto</button>
+            <button class="game-option" onclick="location.href='menu.html'">Menú</button>
+            <button class="game-option" onclick="location.href='eventos.html'">Eventos</button>
+            <button class="game-option" onclick="location.href='llegar.html'">¿Cómo llegar?</button>
+            <button class="game-option" onclick="location.href='fotos.html'">Galería de fotos</button>
+            <button class="game-option" onclick="location.href='reseña.html'">Deja tu reseña</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleAccessibilityMenu() {
+            const menu = document.getElementById("accessibilityMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function toggleHighContrast() {
+            document.body.classList.toggle("high-contrast");
+        }
+
+        function toggleDyslexiaFont() {
+            document.body.classList.toggle("dyslexia-font");
+        }
+
+        function increaseFontSize() {
+            let currentSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--font-size'));
+            document.documentElement.style.setProperty('--font-size', (currentSize + 0.1) + 'em');
+        }
+
+        function resetFontSize() {
+            document.documentElement.style.setProperty('--font-size', '1em');
+        }
+
+        function toggleUnderlineLinks() {
+            document.body.classList.toggle("underline-links");
+        }
+
+        function toggleUppercaseText() {
+            document.body.classList.toggle("uppercase-text");
+        }
+
+        function toggleIncreasedSpacing() {
+            document.body.classList.toggle("increased-spacing");
+        }
+    </script>
+</body>
+</html>
